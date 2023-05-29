@@ -1,0 +1,38 @@
+{% extends 'shared/nft_layout.html' %}
+
+{% block extracss %}
+<link rel="stylesheet"    href="{{ url_for('static', filename='nft/css/sell.css') }}">
+{% endblock %}
+
+{% block extrajs %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="{{ url_for('static', filename='nft/js/sell.js') }}" defer></script>
+{% endblock %}
+
+
+{% block maincontent %}
+<div class="record-container">
+    <table>
+        <tr>
+            <td>Timestamp</td>
+            <td>Seller</td>
+            <td>Buyer</td>
+            <td>CurrentOwner</td>
+            <td>Cost</td>
+            <td>ImageID</td>
+        </tr>
+        {% for record in recordlst%}
+        <tr>
+            <td>{{record['nftTimeStamp']}}</td>
+            <td>{{record['seller']}}</td>
+            <td>{{record['buyer']}}</td>
+            <td>{{record['currentOwner']}}</td>
+            <td>{{record['cost']}}</td>
+            <td>{{record['imageID']}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+{% endblock %}
+
+

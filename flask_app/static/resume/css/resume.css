@@ -1,0 +1,23 @@
+.inst_div *{
+    display: inline-block;
+}
+.inst_div p{
+    right: 1vw;
+    position: absolute;
+}
+.position_div *{
+    display: inline-block;
+}
+.position_div p{
+    right: 1vw;
+    position: absolute;
+}
+.position_res p{
+    display: inline;
+}
+.skills_div p{
+    display: inline;
+}
+hr{
+    width: 80vw;
+}

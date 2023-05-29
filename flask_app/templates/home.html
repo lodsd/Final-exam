@@ -1,0 +1,31 @@
+{% extends 'shared/layout.html' %}
+{% block extracss %}
+<link rel="stylesheet"    href="{{ url_for('static', filename='main/css/home.css') }}">
+{% endblock %}
+{% block maincontent %}
+<!-- Main -->
+<div>
+    <div class="photo-div">
+        <img alt="my photo" loading="lazy" src="../static/main/images/my-photo.jpg">
+    </div>
+    <div class="description-div">
+        <div>
+            <strong>Li Jingqiao</strong>
+            <p>is a student at Michigan State University. I am taking part in CSE477 "Web Application Development" to study the knowledge of frontend and backend development of a website. Now, I have mastered the knowledge of frontends, such as HTML, CSS, and Javascript. And this website is my work for this course's homework1. On this website, I apply many CSS skills to make it cool. For example, I use the @media rule to detect screen width changes, making the website a responsive page. I also use JS to simulate the sound of a piano key on the piano page. You can access it by clicking the "Project" button on the navigation to find the entrance for my piano page. When you click different keys on the piano, you will listen to different sounds triggered by JS code.</p>
+            <br>
+            <p>In addition to this website application course, I also study some knowledge about android development using Java. It helps me a lot to understand some aspects of Android with an awareness of web applications. By the way, it is convenient to build a page in Android because I can drag compositions to a specific position without writing code. </p>
+        </div>
+    </div>
+</div>
+<div>
+    <hr>
+</div>
+<div class="my-fun-fact-div">
+    <div>
+        <strong>A fun fact about me:</strong>
+        <p>{{fun_fact}}</p>
+    </div>
+</div>
+{% endblock %}
+
+

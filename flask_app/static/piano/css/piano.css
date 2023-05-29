@@ -1,0 +1,146 @@
+.piano-div{
+    position: relative;
+    left: 10vw;
+}
+.piano-background{
+    width: 60vw;
+    height: 50vh;
+    background: #000000ba;
+    border-top-left-radius: 80px;
+    border-top-right-radius: 80px;
+}
+.piano-name{
+    text-align: center;
+    position: relative;
+    top: 10vh;
+}
+.piano-name p{
+    /* default value isn't 0, and will make div move to bottom!*/
+    margin-top: 0px;
+    
+    color: white;
+    font-size: x-large;
+}
+.piano-body{
+    width: 54.5vw;
+    height: 20vh;
+    position: absolute;
+    bottom: 1vh;
+    left: 2.75vw;
+}
+.piano-body p{
+    display: none;
+    animation: fade-in 1s 1;
+    /*set cursor to default*/
+    cursor: default;
+
+    text-align: center;
+}
+@keyframes fade-in{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+/* Use absolute position to make piano keys horizontal arrangement */
+.piano-white-key{
+    width: 5.5vw;
+    height: 20vh;
+    background: white;
+    position: absolute;
+    /* control the key text*/
+    display: flex;
+    flex-direction: column-reverse;
+
+    border: 4px solid black;
+    border-radius: 8px;
+    box-sizing: border-box;
+    /* click piano-key transition */
+    transition: transform 0.2s;
+}
+#piano-key-A{
+    left: 0;
+}
+#piano-key-S{
+    left : 5.5vw;    
+}
+#piano-key-D{
+    left : 11vw; 
+}
+#piano-key-F{
+    left : 16.5vw; 
+}
+#piano-key-G{
+    left: 22vw;
+}
+#piano-key-H{
+    left : 27.5vw;
+}
+#piano-key-J{
+    left : 33vw;
+}
+#piano-key-K{
+    left : 38.5vw;
+}
+#piano-key-L{
+    left : 44vw;
+}
+#piano-key-Semicolon{
+    left : 49.5vw;
+}
+.piano-black-key{
+    width: 2.5vw;
+    height: 14vh;
+    background: black;
+    position: absolute;
+    bottom: 6vh;
+
+    display: flex;
+    flex-direction: column-reverse;
+
+    border-radius: 6px;
+
+    transition: transform 0.2s;
+}
+.piano-black-key p{
+    color: white;
+}
+#piano-black-key-W{
+    left: 4vw;
+}
+#piano-black-key-E{
+    left: 9.5vw;
+}
+#piano-black-key-T{
+    left: 20.5vw;
+}
+#piano-black-key-Y{
+    left: 26vw;
+}
+#piano-black-key-U{
+    left: 31.5vw;
+}
+#piano-black-key-O{
+    left: 42.5vw;
+}
+#piano-black-key-P{
+    left: 48vw;
+}
+
+.great-old-one{
+    display: none;
+    text-align : left;
+    animation: fade-in 2s 1;
+}
+.great-old-one img{
+    width: 60vw;
+    height: 50vh;
+    border-top-left-radius: 80px;
+    border-top-right-radius: 80px;
+}
+.awoken-div{
+    text-align: center;
+    display: block;
+    width: 60vw;
+    position: relative;
+    top: -50vh;
+    color: white;
+}

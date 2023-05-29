@@ -1,0 +1,13 @@
+.login-div{
+    text-align: center;
+}
+
+.login-div input{
+    width: 20vw;
+}
+#failure-login{
+    color:red;
+}
+#login-button{
+    background-color: #abbfea;
+}

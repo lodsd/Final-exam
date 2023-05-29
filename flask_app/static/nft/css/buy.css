@@ -1,0 +1,28 @@
+.display-nft-container strong{
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+.display-nft-container{
+    background: rgb(107, 107, 177);
+}
+
+.display-nft-cards-container{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.nft-info-card{
+    display: flex;
+    width: 40%;
+    margin: 5%;
+}
+.nft-info-card img{
+    width: 50%;
+}
+.nft-card-input *{
+    width: 100%;
+}
+.nft-info-card div{
+    margin-left: 5%;
+}

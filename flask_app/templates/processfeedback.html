@@ -1,0 +1,13 @@
+{% extends 'shared/layout.html' %}
+{% block extracss %}
+<link rel="stylesheet"    href="{{ url_for('static', filename='main/css/feedback.css') }}">
+{% endblock %}
+{% block maincontent %}
+<div class="feedback-div">
+    <p>All feedback in the database is as follows:</p>
+    {% for feedback in feedback_data %}
+    <li>{{feedback['name']}} said: {{ feedback['comment']}}</li>
+    <hr>
+    {% endfor %}
+</div>
+{% endblock %}

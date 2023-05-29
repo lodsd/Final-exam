@@ -1,0 +1,46 @@
+.feedback-button{
+    position: absolute;
+    right: 0;
+    top: 50%;
+}
+
+.feedback-button p{
+    margin-right: 0;
+    transform: rotate(180deg);
+    background-color: black;
+    color:white;
+    font-size: large;
+    writing-mode: tb;
+    cursor: pointer;
+}
+
+/*feedback form*/
+.feedback-form{
+    width: 40vw;
+    height: 60vh;
+    top: 20vh;
+    left: 30vw;
+    background-color: black;
+    position: fixed;
+    display: none;
+}
+.feedback-form *{
+    display: block;
+
+    position: relative;
+    left: 10%;
+    width: 80%;
+
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.feedback-submit{
+    background-color: blue;
+    height: 10%;
+}
+.one-line-input{
+    height: 10%;
+}
+.multiple-line-input{
+    height: 40%;
+}

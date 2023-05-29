@@ -1,0 +1,51 @@
+{% extends 'shared/nft_layout.html' %}
+
+{% block extracss %}
+<link rel="stylesheet"    href="{{ url_for('static', filename='nft/css/sell.css') }}">
+{% endblock %}
+
+{% block extrajs %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="{{ url_for('static', filename='nft/js/sell.js') }}" defer></script>
+{% endblock %}
+
+
+{% block maincontent %}
+<div class="sell-container">
+    <br>
+    <div class="generate-nft-container">
+        <div class="generate-nft-input-div">
+            <strong>Description</strong>
+            <textarea id="nft-description"></textarea>
+        </div>
+        <div class="generate-nft-input-div">
+            <strong>Token</strong>
+            <textarea id="nft-token"></textarea>
+        </div>
+        <div class="generate-nft-input-div">
+            <input type="submit" value="Create NFT" onclick="createNFT()">
+            <input id="nft-image" type="file" name="choose a image" accept="image/jpeg">
+            <input type="submit" value="Upload NFT" onclick="uploadNFT()">
+        </div>
+    </div>
+    <br>
+    <div class="display-nft-container">
+        <strong>User {{user}}'s NFTs</strong>
+        
+        <div class="display-nft-cards-container">
+            {% for nft in nftlist %}
+            <div class="nft-info-card">
+                <img src="{{nft['path']}}"/>
+                <div class="nft-card-input">
+                    <textarea id="card-description-{{nft['id']}}">{{nft['description']}}</textarea>
+                    <input id="card-token-{{nft['id']}}" type="text" value="{{nft['token']}}">
+                    <input id="{{nft['id']}}" type="submit" value="Edit" onclick="updateNFT(this.id)">
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+

@@ -1,0 +1,44 @@
+.generate-nft-container{
+    display: flex;
+    background: rgb(107, 107, 177);
+}
+.generate-nft-container div{
+    width: 20%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+.generate-nft-input-div,.display-nft-container strong{
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+.generate-nft-input-div textarea,input{
+    width: 100%;
+}
+
+.display-nft-container{
+    background: rgb(107, 107, 177);
+}
+
+.display-nft-cards-container{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.nft-info-card{
+    display: flex;
+    width: 40%;
+    margin: 5%;
+}
+.nft-info-card img{
+    width: 50%;
+}
+.nft-card-input *{
+    width: 100%;
+}
+.nft-info-card div{
+    margin-left: 5%;
+}

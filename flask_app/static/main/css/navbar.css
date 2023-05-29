@@ -1,0 +1,75 @@
+.navigation{
+    display: flex;
+    background: gray;
+    height: 10vh;
+}
+.nav-title-div{
+    height: 100%;
+    margin-left: 10vw;
+    /*
+    flex layout can set align-items to center
+    */
+    display: flex;
+    align-items: center;
+    flex: 10;
+}
+.menu-icon-div{
+    display: none;
+    float: right;
+}
+
+.toggle-menu-div{
+    margin-right: 10vw;
+    flex: 15vw;
+    display: inline-flex;
+}
+.link-div,.linkedin-icon-div{
+    height: 100%;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+}
+.link-div a{
+    color : white;
+    text-decoration: none;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+.link-div a:hover{
+    opacity: 50%;
+}
+.linkedin-icon-div img,.menu-icon-div img{
+    width: 5vh;
+    height: 5vh;
+    cursor: pointer;
+}
+@media screen and (max-width:650px){
+    .menu-icon-div{
+        margin-right: 10vw;
+        display: flex;
+        align-items: center;
+    }
+    .toggle-menu-div{
+        position: absolute;
+        left: 0;
+        top: 25vh;
+        grid-column: 1/-1;
+        /* make menu display above the main div */
+        z-index: 1;
+        display : none;
+        background-color: gray;
+        height: 80vh;
+        width: 100%;
+        /* animation: expand 1s 1; */
+    }
+    .link-div,.linkedin-icon-div{
+        width: 100%;
+        height: fit-content;
+    }
+}
+/* When the screen expand from less than 650px to more than 650px, reset toggle menu display*/
+@media screen and (min-width: 650px){
+    .toggle-menu-div{
+        display: inline-flex !important;
+    }
+}

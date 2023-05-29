@@ -1,0 +1,35 @@
+{% extends 'shared/layout.html' %}
+
+{% block extracss %}
+<link rel="stylesheet"    href="{{ url_for('static', filename='project/css/project.css') }}">
+{% endblock %}
+
+{% block extrajs %}
+<script src="{{ url_for('static', filename='project/js/projects.js') }}" defer></script>
+
+{% endblock %}
+
+{% block maincontent %}
+<div class="main-grid-div">
+    <div class="grid-header">
+        <h1>Below is a list of projects I worked on in CSE 477:</h1>
+        <p>Click an image, or hyperlink in the description to learn more</p>
+        <hr>
+    </div>
+    <div class="grid-img">
+        <a href="./piano">
+            <img alt="piano img" loading="lazy" src="../static/project/images/piano.jpeg" onclick="navigateToPiano()">
+        </a>
+    </div>
+    <div class="grid-description">
+        <strong>Javascript Piano</strong>
+        <p>As part of my first Homework assignment in CSE477, I developed an interactive piano build in pure HTML, CSS and Javascript. This tool (in addition to my webpage> highlight my ability to build beautiful and mobile-friendly front-end applications. <a href="./piano">Click here to see and play!</a></p>
+        
+    </div>
+    <div class="grid-footer">
+        <hr>
+        <strong>NFT trading marketplace website</strong>
+        <p>This website is my final exam work for CSE 477, you can click <a href="./nft_login">here</a> to log in or sign up.</p>
+    </div>
+</div>
+{% endblock %}

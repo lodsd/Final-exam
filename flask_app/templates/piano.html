@@ -1,0 +1,83 @@
+{% extends 'shared/layout.html' %}
+
+{% block extracss %}
+<link rel="stylesheet"    href="{{ url_for('static', filename='piano/css/piano.css') }}">
+{% endblock %}
+
+{% block extrajs %}
+<script src="{{ url_for('static', filename='piano/js/piano.js') }}" defer></script>
+
+{% endblock %}
+
+{% block maincontent %}
+<div>
+    <p>Behold piano great and old, it's master slumbers in far off cold, If you wish to see a new, call out to it - we see you.</p>
+</div>
+<hr>
+<div class="piano-div">
+    <div id="piano-background" class="piano-background">
+        <!-- Piano title -->
+        <div class="piano-name">
+            <p>The Great Old One</p>
+        </div>
+        <div class="piano-body" onmouseenter="setBodyTextDisplay('block')" onmouseleave="setBodyTextDisplay('none')">
+            <div id="piano-key-A" class="piano-white-key">
+                <p>A</p>
+            </div>
+            <div id="piano-key-S" class="piano-white-key">
+                <p>S</p>
+            </div>
+            <div id="piano-key-D" class="piano-white-key">
+                <p>D</p>
+            </div>
+            <div id="piano-key-F" class="piano-white-key">
+                <p>F</p>
+            </div>
+            <div id="piano-key-G" class="piano-white-key"><p>G</p></div>
+            <div id="piano-key-H" class="piano-white-key">
+                <p>H</p>
+            </div>
+            <div id="piano-key-J" class="piano-white-key">
+                <p>J</p>
+            </div>
+            <div id="piano-key-K" class="piano-white-key">
+                <p>K</p>
+            </div>
+            <div id="piano-key-L" class="piano-white-key">
+                <p>L</p>
+            </div>
+            <div id="piano-key-Semicolon" class="piano-white-key">
+                <p>;</p>
+            </div>
+            <div id="piano-black-key-W" class="piano-black-key">
+                <p>W</p>
+            </div>
+            <div id="piano-black-key-E" class="piano-black-key">
+                <p>E</p>
+            </div>
+            <div id="piano-black-key-T" class="piano-black-key">
+                <p>T</p>
+            </div>
+            <div id="piano-black-key-Y" class="piano-black-key">
+                <p>Y</p>
+            </div>
+            <div id="piano-black-key-U" class="piano-black-key">
+                <p>U</p>
+            </div>
+            <div id="piano-black-key-O" class="piano-black-key">
+                <p>O</p>
+            </div>
+            <div id="piano-black-key-P" class="piano-black-key">
+                <p>P</p>
+            </div>
+        </div>
+
+    </div>
+    <div id="great-old-one" class="great-old-one">
+        <img alt="texture" loading="lazy" src="../static/piano/images/texture.jpeg">
+        <div class="awoken-div">
+            <p>I have awoken</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

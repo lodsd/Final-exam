@@ -1,0 +1,100 @@
+<!-- FILL ME IN WITH CODE FOR YOUR PAGE LAYOUT -->
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dr. Ghassemi's personal page</title>
+  <link rel="stylesheet"    href="{{ url_for('static', filename='main/css/main.css') }}">
+  <link rel="stylesheet"    href="{{ url_for('static', filename='main/css/header.css') }}">
+  <link rel="stylesheet"    href="{{ url_for('static', filename='main/css/navbar.css') }}">
+  <link rel="stylesheet"    href="{{ url_for('static', filename='main/css/footer.css') }}">
+  <link rel="stylesheet"    href="{{ url_for('static', filename='main/css/feedback.css') }}">
+  <link rel="shortcut icon" href="{{ url_for('static', filename='main/images/favicon.ico') }}">
+  {% block extracss %}{% endblock %}
+  <script src="{{ url_for('static', filename='main/js/main.js') }}" defer></script>
+  <script src="{{ url_for('static', filename='main/js/toggle.js') }}"></script>
+  {% block extrajs %}{% endblock %}
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+      <img alt="Header banner" loading="lazy" id="header-banner" src="../static/main/images/banner.jpg">
+    </header>
+
+  <!-- Navigation -->
+  <nav class="navigation">
+    <!-- Left part of the navigation, display the assignment name-->
+    <div class="nav-title-div">
+        <p>CSE 477 - Homework 1</p>
+    </div>
+    <div class="menu-icon-div" onclick="toggle()">
+        <img alt="Menu Icon" loading="lazy" id="nav-menu-icon" src="../static/main/images/menu-bar.png">
+    </div>
+    <div id="link-list" class="toggle-menu-div">
+        <div class="link-div">
+            <a href="./home">Home</a>
+        </div>
+        <div class="link-div">
+            <a href="./projects">Projects</a>
+        </div>
+        <div class="link-div">
+            <a href="./resume">Resume</a>
+        </div>
+        <div class="link-div">
+          <a href="/chat">Chat</a>
+        </div>
+        {% if user%}
+        <div class="link-div">
+          <a href="/logout">Logout</a>
+        </div>
+        {% else %}
+        <div class="link-div">
+          <a href="/login">Login</a>
+        </div>
+        {% endif %}
+        <div class="linkedin-icon-div">
+            <a href="https://www.linkedin.com">
+                <img alt="Linked me icon" loading="lazy" id="linkedin-icon" src="../static/main/images/social-linkedin.png">
+            </a>
+        </div>
+    </div>
+</nav>
+
+  <!-- The main content  -->
+  <main class="main-container">
+    {% block maincontent %}{% endblock %}
+    
+    
+  </main>
+
+  <!-- The footer of the file -->
+  <!-- Footer -->
+  <footer class="footer">
+    <div>
+        <p>@2023 Li Jingqiao</p>
+    </div>
+  </footer>
+  <!-- feedback button -->
+  <div class="feedback-button" onclick="openFeedback()">
+    <p>Feedback</p>
+  </div>
+  <!-- feedback form-->
+  <div id="feedback-form" class="feedback-form">
+    <input id="name-input" class="one-line-input" placeholder="Your name">
+    <input id="email-input" class="one-line-input" placeholder="Your email">
+    <textarea id="feedback-input" class="multiple-line-input" placeholder="Insert Feedback Here"></textarea>
+    <input class="feedback-submit" value="Submit" type="button" onclick="submitFeedback()">
+  </div>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
